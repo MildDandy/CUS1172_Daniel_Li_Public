@@ -1,0 +1,133 @@
+
+@media print{
+  .screen_only{
+    display:none;
+  }
+}
+
+/*
+@media only screen and (min-width: 600px) {
+   For tablets:
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+*/
+@media screen and (max-width: 768px){
+.window{
+  max-width:700px;
+}
+.window-2{
+  max-width:100%;
+}
+/* Clear floats after the columns */
+
+/* HTML Element / Tag Selector */
+a:link {color:red;}
+a:visited {color:red;}
+a:hover {color:red;}
+
+h1{
+  text-shadow: 0px 1px 5px white
+}
+body{
+  font-family: Helvetica, sans-serif;
+  background-color: #e6ffff
+}
+table{
+  background-color:#ccffee;
+  border:2px solid #40bf40;
+  border-left: 5px solid #40bf40;
+  border-radius: 0 20px 20px 0;
+  max-width:700px;
+  box-shadow: 0.4rem 0.4rem black;
+  padding-right: 10px;
+}
+th{
+  background-color:#ccffee;
+  border:2px solid #40bf40;
+  border-left: 5px solid #40bf40;
+  border-radius: 10px;
+  width:600px
+}
+td{
+  border: 1px solid #40bf40;
+  background-color:#e6fffa;
+}
+
+p, ul, ol{
+  list-style-position: inside;
+  border: 1px solid black;
+  padding:5px;
+  border-radius: 5px;
+  background-color:#ccccff;
+}
+ol{
+  font-size: 20px;
+  padding: 2px;
+}
+form{
+  border: 1px solid black;
+  color:gold;
+  text-shadow: 0 0 3px black;
+  background-color:#ccccff
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Class Selectors*/
+.big-box{
+  border-radius:5px;
+  background-color:#9999ff;
+  max-width:100%;
+  padding:10px;
+  border:2px solid black;
+  margin:10px;
+  box-shadow: 0.4rem 0.4rem black
+}
+.behind{
+    border-width: 3px;
+    background-color: #cae8ca;
+    border-style: solid;
+    padding: 7px;
+    max-width: 330px;
+    z-index: 999;
+    font-weight: bold;
+    text-align: center;
+}
+
+.video{
+  height:auto;
+  width:100%;
+}
+
+/* ID Selector */
+#list{
+  border: 1px solid black;
+  border-left: 5px solid red;
+  background-color: #f1f1f1;
+  list-style-type: none;
+  padding: 5px 20px;
+  margin: 10px;
+  max-width:500px;
+  border-radius:5px;
+  box-shadow: 0.5rem 0.5rem black
+}
+#media, #website{
+  font-size: 50px;
+}
+}
