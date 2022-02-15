@@ -48,11 +48,13 @@ a:visited {color:red;}
 a:hover {color:red;}
 
 h1{
-  text-shadow: 0px 1px 5px white
+  text-shadow: 0px 1px 5px white;
+  font-family: 'Source Sans Pro', sans-serif
 }
 body{
   font-family: Helvetica, sans-serif;
   background-color: #e6ffff
+
 }
 table{
   background-color:#ccffee;
@@ -94,6 +96,9 @@ form{
 }
 span{
   padding-right:50px;
+}
+label{
+  font-family: 'Staatliches', cursive;
 }
 /* Class Selectors*/
 .big-box{
