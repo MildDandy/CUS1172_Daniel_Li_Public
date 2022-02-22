@@ -23,13 +23,6 @@
 }
 */
 @media screen and (min-width: 768px){
-iframe{
-  height: 13em;
-}
-.card{
-  width: 30%;
-}
-
 .column {
   float: left;
   max-width: 45%;
@@ -50,28 +43,38 @@ iframe{
 
 
 /* HTML Element / Tag Selector */
-.card>a:link {color:white;}
-.card>a:visited {color:white;}
+a:link {color:red;}
+a:visited {color:red;}
 a:hover {color:red;}
 
 h1{
   text-shadow: 0px 1px 5px white;
-  font-family: 'Inter', sans-serif;
-  color:blue;
-}
-h2{
-  text-shadow: 0px 1px 5px white;
+  font-family: 'Source Sans Pro', sans-serif
 }
 body{
-  font-family: 'Inter', sans-serif;
+  font-family: 'Staatliches', cursive;
   background-color: #e6ffff
+
 }
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+table{
+  background-color:#ccffee;
+  border:2px solid #40bf40;
+  border-left: 5px solid #40bf40;
+  border-radius: 0 20px 20px 0;
+  width:100%;
+  box-shadow: 0.4rem 0.4rem black;
+  padding-right: 10px;
+}
+th{
+  background-color:#ccffee;
+  border:2px solid #40bf40;
+  border-left: 5px solid #40bf40;
+  border-radius: 10px;
+  width:600px
+}
+td{
+  border: 1px solid #40bf40;
+  background-color:#e6fffa;
 }
 
 p, ul, ol{
@@ -79,7 +82,7 @@ p, ul, ol{
   border: 1px solid black;
   padding:5px;
   border-radius: 5px;
-  background-color:#e6fffa;
+  background-color:#ccccff;
 }
 ol{
   font-size: 20px;
@@ -87,7 +90,8 @@ ol{
 }
 form{
   border: 1px solid black;
-  color:#161a34;
+  color:gold;
+  text-shadow: 0 0 3px black;
   background-color:#ccccff
 }
 span{
@@ -144,8 +148,4 @@ label{
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-#index{
-  font-family: 'Staatliches', cursive;
-  background-color: #e6ffff
 }

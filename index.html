@@ -1,115 +1,182 @@
-<!-- CUS 1172 Project 1 Milestone 1: Daniel Li -->
+<!-- CUS 1172 Project 1 Milestone 3: Daniel Li -->
 
 <html>
   <head>
-    <title>Daniel's Profile Page - CUS 1172 (Now with Color!)</title>
+    <title>Daniel's Profile Page - CUS 1172 (Now with Bootstrap!)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="stylesheet" href="css\mycss_web.css"/>
     <link rel="stylesheet" href="css\mycss_tablet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Source+Sans+Pro:wght@200&family=Staatliches&display=swap" rel="stylesheet">
-    <style>
-      img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Source+Sans+Pro:wght@200&family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="http://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/doughnut.png
   </head>
-<body>
-  <h1>☀ MENU INDEX ☀</h1>
-  <ol>
-    <li><a href="#profile">Profile</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#experience">Work Experience</a></li>
-    <li><a href="#programming">Programming Skills</a></li>
-    <li><a href="#interests">Interests</a></li>
-    <li><a href="#media">Favorite Media</a></li>
-    <li><a href="#website">Favorite Websites</a></li>
-</ol>
-
-    <div>
-      <h1 id="profile">☀ PROFILE ☀</h1>
-      <img src="gifs\kirbysleep.gif"/>
-  	  <h2>Daniel Li </h2>
-      <ul>
-  	    <li>Computer Science Major</li>
-  	    <li>Senior @ St. John's University (Class of '22)</li>
-  	    <li>21 years old </li>
-      </ul>
-  	  <h1 id="education">☀ EDUCATION ☀</h1>
-  		<p> I graduated from Bayside Highschool in 2018. Now I'm currently a senior at St. John's University with a major in Computer Science under ABET, with no specialization. I'm still considering what career in Computer Science I want to particullarly follow, but I've been interested in Data Science and spreadsheeting.</p>
-      <form>
-        <input type="checkbox" name="diploma" value="Highschool" checked>
-          <label for="diploma">High School Diploma</label><br>
-          <input type="checkbox" name="degree" value="College">
-          <label for="degree">Bachelor's in Computer Science</label><br>
-      </form>
+<body style="background-color:#00bcd480">
+<div class="jumbotron text-center">
+<div class="container" id="index">
+  <div class="row bg-dark border border-3 border-dark rounded-pill">
+    <div class="col-sm">
+    <a href="#profile">Profile</a>
     </div>
-	  <h1 id="experience">☀ EXPERIENCE ☀</h1>
-      <table>
-        <tr>
-          <th>Position</th>
-          <th>Employment Period</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td>SYEP Participant: Clerical Aide Volunteer</td>
-    		  <td>Summer 2019 & Summer 2021</td>
-    		  <td>Organized hundreds of employee credentials and handled calls related to employee reference checks and credential updates.</td>
-        </tr>
-        <tr>
-          <td>SYEP Participant: Food Pantry Volunteer</td>
-    		  <td>Summer 2018
-    		  <td>Assisted in sorting and distribution of food items to needy people in the community.
-        </tr>
-        <tr>
-    		  <td>Sunday School Teaching Assistant</td>
-    		  <td>09/2015 - 05/2018
-    		  <td>Volunteered as Teaching assistant to second grade students at Sunday School.
-              Guided students on different activities related to Sunday School</td>
-        </tr>
-        <tr>
-    		  <td>Volunteer Recreation Assistant</td>
-    		  <td>Summer 2016</td>
-    		  <td>Assisted in engaging senior citizens, transportation etc.</td>
-    </table>
-	<h1 id="programming">☀ PROGRAMMING SKILLS ☀</h1> <span>I started programming in high school when I had to use Arduino for an engineering course, as Arduino devices use a variation of C++. After that, my programming experience has mainly been learning Java from the Computer Science classes at St. John's, while also dabbling with some Python and HTML/CSS/JavaScript on the side.</span>
-		<h2>Java</h2>
-    <p>★★★★☆</p>
-		<h2>Python</h2>
-    <p>★★★☆☆</p>
-		<h2>HTML / CSS / JavaScript</h2>
-    <p>★★☆☆☆</p>
-	  <h1 id="interests">☀ GENERAL INTERESTS ☀</h1>
-    <span>My main hobby is video games. I mostly grew up with Nintendo consoles (GBA, DS, 3DS, Wii, Switch), so I grew up loving Nintendo franchises like Pokemon, Kirby, Zelda, and so on. I also love <a href="https://www.puzzle-nonograms.com/" target="_blank" >Picross / Nonograms</a>, which are counting number puzzles where you find the right boxes to fill in based on clues on rows and columns. I've also dabbled a bit into photography.</span>
+    <div class="col-sm">
+    <a href="#education">Education</a>
+    </div>
+    <div class="col-sm">
+    <a href="#programming">Programming Skills</a>
+    </div>
+    <div class="col-sm">
+    <a href="#experience">Work Experience</a>
+    </div>
+    <div class="col-sm">
+    <a href="#interests">Interests</a>
+    </div>
+    <div class="col-sm">
+    <a href="#media">Favorite Media</a>
+    </div>
+    <div class="col-sm">
+    <a href="#website">Favorite Websites</a>
+    </div>
+
+  </div>
+</div>
+</div>
+<div class="row">
+<div class="card bg-info col-sm-12 col-lg-4">
+  <h1 class="card-header" id="profile">PROFILE</h1>
+  <img class="card-img-top img-fluid img-thumbnail w-50 h-40" src="gifs\kirbysleep.gif" alt="Card image">
+  <div class="card-body">
+    <h2 class="card-title">Daniel Li</h1>
+    <ul class="card-text">
+      	    <li>Computer Science Major</li>
+      	    <li>Senior @ St. John's University (Class of '22)</li>
+      	    <li>21 years old </li>
+          </ul>
+  </div>
+</div>
+<div class="card bg-info col-sm-12 col-lg-4">
+  <div class="card-body">
+    <h1 class="card-header" id="education">EDUCATION</h1>
+    <p class="card-text">I graduated from Bayside Highschool in 2018. Now I'm currently a senior at St. John's University with a major in Computer Science under ABET, with no specialization. I'm still considering what career in Computer Science I want to particullarly follow, but I've been interested in Data Science and spreadsheeting.</p>
+    <form class="p-1">
+      <input type="checkbox" name="diploma" value="Highschool" checked>
+        <label for="diploma">High School Diploma</label><br>
+        <input type="checkbox" name="degree" value="College">
+        <label for="degree">Bachelor's in Computer Science</label><br>
+    </form>
+  </div>
+</div>
+<div class="card bg-info  col-sm-12 col-lg-4">
+  <div class="card-body">
+    <h1 class="card-header" id="programming">PROGRAMMING SKILLS</h1>
+    <p class="card-text">I started programming in high school when I had to use Arduino for an engineering course, as Arduino devices use a variation of C++. After that, my programming experience has mainly been learning Java from the Computer Science classes at St. John's, while also dabbling with some Python and HTML/CSS/JavaScript on the side.</p>
+    <h4 class="card-title">Java <span class="badge badge-dark">★★★★☆</span></h4>
+		<h4 class="card-title">Python <span class="badge badge-dark">★★★☆☆</span></h4>
+		<h4 class="card-title">HTML / CSS / JavaScript <span class="badge badge-dark">★★☆☆☆</span></h4>
+  </div>
+</div>
+</div>
+	  <h1 id="experience">EXPERIENCE</h1>
+<table class="table table-hover bg-light border border-primary">
+  <thead>
+    <tr>
+      <th scope="col">Position</th>
+      <th scope="col">Employment Period</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">SYEP Participant: Clerical Aide Volunteer</th>
+      <td>Summer 2019 & Summer 2021</td>
+      <td>Organized hundreds of employee credentials and handled calls related to employee reference checks and credential updates.</td>
+    </tr>
+    <tr>
+      <th scope="row">SYEP Participant: Food Pantry Volunteer</th>
+      <td>Summer 2018</td>
+      <td>Assisted in sorting and distribution of food items to needy people in the community.</td>
+    </tr>
+    <tr>
+      <th scope="row">Sunday School Teaching Assistant</th>
+      <td>09/2015 - 05/2018</td>
+      <td>Volunteered as Teaching assistant to second grade students at Sunday School.
+          Guided students on different activities related to Sunday School</td>
+    </tr>
+    <tr>
+      <th scope="row">Volunteer Recreation Assistant</th>
+      <td>Summer 2016</td>
+      <td>Assisted in engaging senior citizens, transportation etc.</td>
+    </tr>
+
+  </tbody>
+</table>
+
+	  <h1 id="interests">GENERAL INTERESTS</h1>
+    <p>My main hobby is video games. I mostly grew up with Nintendo consoles (GBA, DS, 3DS, Wii, Switch), so I grew up loving Nintendo franchises like Pokemon, Kirby, Zelda, and so on. I also love <a href="https://www.puzzle-nonograms.com/" target="_blank" >Picross / Nonograms</a>, which are counting number puzzles where you find the right boxes to fill in based on clues on rows and columns. I've also dabbled a bit into photography.</p>
 
 
-	  <h1 id="media">☀ FAVORITE MEDIA ☀</h1> Showcase videos with your favorite song, your favorite movie and your favorite TV show
-    <h4>Favorite Song</h4>
-    <iframe width="420" height="315"
-    src="https://www.youtube.com/embed/Ql_dEdMEjl4">
-    </iframe>
-    <h4>Favorite TV Show: Spongebob</h4>
-    <iframe width="420" height="315"
-    src="https://www.youtube.com/embed/Q6ctb-Pb3lc">
-    </iframe>
-    <h4>Favorite Movie: UP</h4>
+	  <h1 id="media">FAVORITE MEDIA</h1>
+    <div class="row justify-content-center">
+    <div class="card">
+      <iframe src="https://www.youtube.com/embed/Ql_dEdMEjl4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="card-body">
+        <h5 class="card-title">Favorite Song</h5>
+                <img class="card-img-bottom h-75 w-75" src="https://i1.sndcdn.com/artworks-000361354230-8smyml-t500x500.jpg" alt="Card image">
+      </div>
+    </div>
+    <div class="card">
+      <iframe src="https://www.youtube.com/embed/Q6ctb-Pb3lc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="card-body">
+        <h5 class="card-title">Favorite TV Show</h5>
+        <img class="card-img-bottom" src="https://1000logos.net/wp-content/uploads/2020/09/SpongeBob-SquarePants-Logo-1999.jpg" alt="Card image">
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ORFWdXl_zJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="card">
+      <iframe src="https://www.youtube.com/embed/ORFWdXl_zJ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="card-body">
+        <h5 class="card-title">Favorite Movie</h5>
+        <img class="card-img-bottom" src="https://static.wikia.nocookie.net/logopedia/images/5/5a/Up_%282009_film%29_logo.png/revision/latest/scale-to-width-down/1000?cb=20190113141445" alt="Card image">
+      </div>
+    </div>
+  </div>
 
-	<h1 id="website">☀ FAVORITE WEBSITES ☀</h1>
-  <a href="https://www.ratemyprofessors.com/"><img src="https://johnjaysentinel.com/wp-content/uploads/2018/12/RMP.jpg" target="_blank" alt="RateMyProfessor" style="width:220px;height:100px"></a>
-  <p>RateMyProfessor is a useful website throughout the entirety of your time spent in college. Lets you narrow down your options from hundreds of professors when you're indecisive on the classes you want to take.</p>
-  <a href="https://www.youtube.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/2560px-Logo_of_YouTube_%282015-2017%29.svg.png" target="_blank" alt="YouTube" style="width:200px;height:100px"></a>
-  <p>YouTube is just an all-around universal website for video hosting and content creation. I've pretty much used the site since I was elementary school and it's been an infinite source of entertainment.</p>
-  <a href="https://www.kongregate.com/"><img src="https://e.snmc.io/lk/o/x/34836b8e7be9405bda580ed63040f1de/5278293" target="_blank" alt="Kongregate" style="width:100px;height:100px"></a>
-  <p>Kongregate was one of many websites (i.e. Newgrounds, coolmathgames, Nitrome, Armor Games, etc.) that hosted Flash games online in the mid-to-late 2000s. Even though Adobe Flash Player was finally discontinued in January 2021 of this year and many of these websites can't run Flash games properly anymore, they still hold a place in my heart to this day.</p>
+	<h1 id="website">FAVORITE WEBSITES</h1>
 
-	<h1>☀ MY PROJECTS ☀</h1>
+  <div class="row justify-content-center">
+  <div class="card">
+    <a href="https://www.ratemyprofessors.com/">
+    <img class="card-img-top w-80 h-60" src="https://johnjaysentinel.com/wp-content/uploads/2018/12/RMP.jpg" alt="Card image">
+  </a>
+    <div class="card-body">
+      <h5 class="card-title">RateMyProfessors</h5>
+      <p class="card-text">RateMyProfessor is a useful website throughout the entirety of your time spent in college. Lets you narrow down your options from hundreds of professors when you're indecisive on the classes you want to take.RateMyProfessor is a useful website throughout the entirety of your time spent in college. Lets you narrow down your options from hundreds of professors when you're indecisive on the classes you want to take.</p>
+    </div>
+  </div>
+  <div class="card">
+      <a href="https://www.youtube.com/">
+    <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/2560px-Logo_of_YouTube_%282015-2017%29.svg.png" alt="Card image">
+</a>
+    <div class="card-body">
+      <h5 class="card-title">YouTube</h5>
+      <p class="card-text">YouTube is just an all-around universal website for video hosting and content creation. I've pretty much used the site since I was elementary school and it's been an infinite source of entertainment.</p>
+    </div>
+  </div>
+  <div class="card">
+    <a href="https://www.kongregate.com/">
+    <img class="card-img-top w-50 h-40" src="https://e.snmc.io/lk/o/x/34836b8e7be9405bda580ed63040f1de/5278293" alt="Card image">
+  </a>
+    <div class="card-body">
+      <h5 class="card-title">Kongregate</h5>
+      <p class="card-text">Kongregate was one of many websites (i.e. Newgrounds, coolmathgames, Nitrome, Armor Games, etc.) that hosted Flash games online in the mid-to-late 2000s. Even though Adobe Flash Player was finally discontinued in January 2021 of this year and many of these websites can't run Flash games properly anymore, they still hold a place in my heart to this day.</p>
+    </div>
+  </div>
+</div>
+
+	<h1>MY PROJECTS</h1>
   <h2><a href="https://milddandy.github.io/CUS-1172_Project-1">Project 1: Profile Page</a></h2>
   <img src="gifs\kyoob2.gif" width="10%"/>
   </body>
