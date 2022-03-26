@@ -1,3 +1,22 @@
+/*Element selector*/
+.mytitle{
+  color:red
+}
+.completed{
+  text-decoration: line-through;
+}
+
+#jubilife{
+  color:green;
+}
+#style_me{
+  color:red;
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+}
+
 span{
   font-weight: bold;
 }
