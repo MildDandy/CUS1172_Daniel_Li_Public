@@ -1,183 +1,131 @@
-<!-- CUS 1172 Project 1 Milestone 3: Daniel Li -->
-
 <html>
   <head>
-    <title>Daniel's Profile Page - CUS 1172 (Now with Bootstrap!)</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <link rel="stylesheet" href="css\mycss_web.css"/>
-    <link rel="stylesheet" href="css\mycss_tablet.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Source+Sans+Pro:wght@200&family=Staatliches&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="http://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/doughnut.png
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Source+Sans+Pro:wght@200&family=Staatliches&family=Ubuntu&display=swap" rel="stylesheet">
+
+    <style>
+
+      /*Element selector*/
+      h1{
+
+      }
+
+      .mytitle{
+        color:red
+      }
+
+      #jubilife{
+        color:green;
+      }
+      #style_me{
+        color:red;
+      }
+
+      body{
+          font-family: 'Ubuntu', sans-serif;
+      }
+      button{
+      }
+
+    </style>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      //user can't click on submit yet
+      document.querySelector("#submit").disabled = true;
+      //Only enable when user types something
+      document.querySelector("#task").onkeyup = () => {
+        if(document.querySelector("#task").value.length > 0){
+          document.querySelector("#submit").disabled = false;
+        }
+        else{
+          document.querySelector("#submit").disabled = true;
+        }
+      }
+
+      document.querySelector("#new_task").onsubmit = () => {
+        //This is programatically creating a new element, referencing an empty <li></li> item
+        const li = document.createElement("li");
+        //Creating a string literal AND a button given a class called remove;
+        let task_text = document.querySelector("#task").value;
+        let new_task_html = `
+          <span>${task_text}</span>
+          <button class="remove">❌</button>
+          <button class="complete">✔️</button>
+        `;
+        li.innerHTML = new_task_html;
+        // Add the actual new item to the empty tasks_list
+        document.querySelector("#tasks_list").append(li);
+        //Doesn't exist in the DOM, exists locally in the browser in memory
+        //Resets the input field and submit button for the next go-around
+        document.querySelector("#task").value = "";
+        document.querySelector("#submit").disabled = true;
+        //Prevents the page from reloading
+        return false;
+      }
+
+
+
+
+      //Click event registered to the ENTIRE page.
+      document.addEventListener("click", event => {
+        console.log(event.target.className);
+        console.log(event.target.parentElement);
+        element = event.target;
+        if(element.className === "remove"){
+          element.parentElement.remove();
+        }
+
+        if(element.className === "complete"){
+          //element.getElementsByTagName("style")
+          element.getElementsByTagName("style").backgroundColor = "green"
+          element.remove();
+          //Make the element span text strikethrough
+        }
+      })
+    })
+
+    </script>
+
+
+    <title>
+      Tasklist
+    </title>
   </head>
-<body style="background-color:#00bcd480">
-<div class="jumbotron text-center">
-<div class="container" id="index">
-  <div class="row bg-dark border border-3 border-dark rounded-pill">
-    <div class="col-sm">
-    <a href="#profile">Profile</a>
-    </div>
-    <div class="col-sm">
-    <a href="#education">Education</a>
-    </div>
-    <div class="col-sm">
-    <a href="#programming">Programming Skills</a>
-    </div>
-    <div class="col-sm">
-    <a href="#experience">Work Experience</a>
-    </div>
-    <div class="col-sm">
-    <a href="#interests">Interests</a>
-    </div>
-    <div class="col-sm">
-    <a href="#media">Favorite Media</a>
-    </div>
-    <div class="col-sm">
-    <a href="#website">Favorite Websites</a>
-    </div>
+  <body>
+    <h1 class="text-center bg-dark text-light"> Welcome to your Tasklist! 📝</h1>
 
-  </div>
-</div>
-</div>
-<div class="row">
-<div class="card bg-info col-sm-12 col-lg-4">
-  <h1 class="card-header" id="profile">PROFILE</h1>
-  <img class="card-img-top img-fluid img-thumbnail w-50 h-40" src="gifs\kirbysleep.gif" alt="Card image">
-  <div class="card-body">
-    <h2 class="card-title">Daniel Li</h1>
-    <ul class="card-text">
-      	    <li>Computer Science Major</li>
-      	    <li>Senior @ St. John's University (Class of '22)</li>
-      	    <li>21 years old </li>
-          </ul>
-  </div>
-</div>
-<div class="card bg-info col-sm-12 col-lg-4">
-  <div class="card-body">
-    <h1 class="card-header" id="education">EDUCATION</h1>
-    <p class="card-text">I graduated from Bayside Highschool in 2018. Now I'm currently a senior at St. John's University with a major in Computer Science under ABET, with no specialization. I'm still considering what career in Computer Science I want to particullarly follow, but I've been interested in Data Science and spreadsheeting.</p>
-    <form class="p-1">
-      <input type="checkbox" name="diploma" value="Highschool" checked>
-        <label for="diploma">High School Diploma</label><br>
-        <input type="checkbox" name="degree" value="College">
-        <label for="degree">Bachelor's in Computer Science</label><br>
-    </form>
-  </div>
-</div>
-<div class="card bg-info  col-sm-12 col-lg-4">
-  <div class="card-body">
-    <h1 class="card-header" id="programming">PROGRAMMING SKILLS</h1>
-    <p class="card-text">I started programming in high school when I had to use Arduino for an engineering course, as Arduino devices use a variation of C++. After that, my programming experience has mainly been learning Java from the Computer Science classes at St. John's, while also dabbling with some Python and HTML/CSS/JavaScript on the side.</p>
-    <h4 class="card-title">Java <span class="badge badge-dark">★★★★☆</span></h4>
-		<h4 class="card-title">Python <span class="badge badge-dark">★★★☆☆</span></h4>
-		<h4 class="card-title">HTML / CSS / JavaScript <span class="badge badge-dark">★★☆☆☆</span></h4>
-  </div>
-</div>
-</div>
-	  <h1 id="experience">EXPERIENCE</h1>
-<table class="table table-hover bg-light border border-primary">
-  <thead>
-    <tr>
-      <th scope="col">Position</th>
-      <th scope="col">Employment Period</th>
-      <th scope="col">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">SYEP Participant: Clerical Aide Volunteer</th>
-      <td>Summer 2019 & Summer 2021</td>
-      <td>Organized hundreds of employee credentials and handled calls related to employee reference checks and credential updates.</td>
-    </tr>
-    <tr>
-      <th scope="row">SYEP Participant: Food Pantry Volunteer</th>
-      <td>Summer 2018</td>
-      <td>Assisted in sorting and distribution of food items to needy people in the community.</td>
-    </tr>
-    <tr>
-      <th scope="row">Sunday School Teaching Assistant</th>
-      <td>09/2015 - 05/2018</td>
-      <td>Volunteered as Teaching assistant to second grade students at Sunday School.
-          Guided students on different activities related to Sunday School</td>
-    </tr>
-    <tr>
-      <th scope="row">Volunteer Recreation Assistant</th>
-      <td>Summer 2016</td>
-      <td>Assisted in engaging senior citizens, transportation etc.</td>
-    </tr>
-
-  </tbody>
-</table>
-
-	  <h1 id="interests">GENERAL INTERESTS</h1>
-    <p>My main hobby is video games. I mostly grew up with Nintendo consoles (GBA, DS, 3DS, Wii, Switch), so I grew up loving Nintendo franchises like Pokemon, Kirby, Zelda, and so on. I also love <a href="https://www.puzzle-nonograms.com/" target="_blank" >Picross / Nonograms</a>, which are counting number puzzles where you find the right boxes to fill in based on clues on rows and columns. I've also dabbled a bit into photography.</p>
-
-
-	  <h1 id="media">FAVORITE MEDIA</h1>
-    <div class="row justify-content-center">
-    <div class="card">
-      <iframe src="https://www.youtube.com/embed/Ql_dEdMEjl4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <div class="card-body">
-        <h5 class="card-title">Favorite Song</h5>
-                <img class="card-img-bottom h-75 w-75" src="https://i1.sndcdn.com/artworks-000361354230-8smyml-t500x500.jpg" alt="Card image">
-      </div>
-    </div>
-    <div class="card">
-      <iframe src="https://www.youtube.com/embed/Q6ctb-Pb3lc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <div class="card-body">
-        <h5 class="card-title">Favorite TV Show</h5>
-        <img class="card-img-bottom" src="https://1000logos.net/wp-content/uploads/2020/09/SpongeBob-SquarePants-Logo-1999.jpg" alt="Card image">
-
-      </div>
-    </div>
-    <div class="card">
-      <iframe src="https://www.youtube.com/embed/ORFWdXl_zJ4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <div class="card-body">
-        <h5 class="card-title">Favorite Movie</h5>
-        <img class="card-img-bottom" src="https://static.wikia.nocookie.net/logopedia/images/5/5a/Up_%282009_film%29_logo.png/revision/latest/scale-to-width-down/1000?cb=20190113141445" alt="Card image">
-      </div>
-    </div>
-  </div>
-
-	<h1 id="website">FAVORITE WEBSITES</h1>
-
-  <div class="row justify-content-center">
-  <div class="card">
-    <a href="https://www.ratemyprofessors.com/">
-    <img class="card-img-top w-80 h-60" src="https://johnjaysentinel.com/wp-content/uploads/2018/12/RMP.jpg" alt="Card image">
-  </a>
-    <div class="card-body">
-      <h5 class="card-title">RateMyProfessors</h5>
-      <p class="card-text">RateMyProfessor is a useful website throughout the entirety of your time spent in college. Lets you narrow down your options from hundreds of professors when you're indecisive on the classes you want to take.RateMyProfessor is a useful website throughout the entirety of your time spent in college. Lets you narrow down your options from hundreds of professors when you're indecisive on the classes you want to take.</p>
-    </div>
-  </div>
-  <div class="card">
-      <a href="https://www.youtube.com/">
-    <img class="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/2560px-Logo_of_YouTube_%282015-2017%29.svg.png" alt="Card image">
-</a>
-    <div class="card-body">
-      <h5 class="card-title">YouTube</h5>
-      <p class="card-text">YouTube is just an all-around universal website for video hosting and content creation. I've pretty much used the site since I was elementary school and it's been an infinite source of entertainment.</p>
-    </div>
-  </div>
-  <div class="card">
-    <a href="https://www.kongregate.com/">
-    <img class="card-img-top w-50 h-40" src="https://e.snmc.io/lk/o/x/34836b8e7be9405bda580ed63040f1de/5278293" alt="Card image">
-  </a>
-    <div class="card-body">
-      <h5 class="card-title">Kongregate</h5>
-      <p class="card-text">Kongregate was one of many websites (i.e. Newgrounds, coolmathgames, Nitrome, Armor Games, etc.) that hosted Flash games online in the mid-to-late 2000s. Even though Adobe Flash Player was finally discontinued in January 2021 of this year and many of these websites can't run Flash games properly anymore, they still hold a place in my heart to this day.</p>
-    </div>
-  </div>
-</div>
-
-	<h1>MY PROJECTS</h1>
-  <h2><a href="https://milddandy.github.io/CUS-1172_Project-1">Project 1: Profile Page</a></h2>
-  <img src="gifs\kyoob2.gif" width="10%"/>
+    <p id="jubilife" class="font-weight-bold text-right">CUS 1172 Assignment #2</p>
+<h1 class="border-bottom border-dark">Tasks</h1>
+<ul id="tasks_list">
+  <li class="border-bottom border-primary">
+    <span> Make text strikethrough when you click on the checkmark.</span>
+    <button class="remove">❌</button>
+    <button class="complete">✔️</button>
+  </li>
+  <li>
+    <span> Let user choose between low medium and high priority when creating a new task.</span>
+    <button class="remove">❌</button>
+    <button class="complete">✔️</button>
+  </li>
+  <li>
+    <span>Format buttons to be aligned within the same row.</span>
+    <button class="remove">❌</button>
+    <button class="complete">✔️</button>
+  </li>
+</ul>
+<form id="new_task">
+  <input id="task" autocomplete="off" autofocus placeholder="New Task" type="text">
+  <input id="submit" type="submit">
   </body>
 </html>
