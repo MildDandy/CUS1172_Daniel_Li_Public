@@ -23,6 +23,9 @@
       .mytitle{
         color:red
       }
+      .completed{
+        text-decoration: line-through;
+      }
 
       #jubilife{
         color:green;
@@ -88,7 +91,7 @@
 
         if(element.className === "complete"){
           //element.getElementsByTagName("style")
-          element.getElementsByTagName("style").backgroundColor = "green"
+          element.parentElement.classList.add("completed");
           element.remove();
           //Make the element span text strikethrough
         }
