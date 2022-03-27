@@ -21,24 +21,15 @@
   <p id="jubilife" class="font-weight-bold text-right">CUS 1172 Assignment #2</p>
   <h1 class="border-bottom border-dark">Tasks</h1>
   <ul id="tasks_list">
-    <li class="border-bottom border-primary">
-      <span> Make text strikethrough when you click on the checkmark.</span>
-      <button class="remove">❌</button>
-      <button class="complete">✔️</button>
-    </li>
-    <li>
-      <span> Let user choose between low medium and high priority when creating a new task.</span>
-      <button class="remove">❌</button>
-      <button class="complete">✔️</button>
-    </li>
-    <li>
-      <span>Format buttons to be aligned within the same row.</span>
-      <button class="remove">❌</button>
-      <button class="complete">✔️</button>
-    </li>
   </ul>
   <form id="new_task">
     <input id="task" autocomplete="off" autofocus placeholder="New Task" type="text">
+    <div>
+      <label for="task-priority"> Priority: </label>
+      <span class="text-success"><input name="task-priority" type="radio" value="Low"/ checked> Low</span>
+      <span class="text-warning"><input name="task-priority" type="radio" value="Medium"/> Medium</span>
+      <span class="text-danger"><input name="task-priority" type="radio" value="High"/> High</span>
+    </div>
     <input id="submit" type="submit">
 </body>
 
