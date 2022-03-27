@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let task_priority = document.querySelector('input[name="task-priority"]:checked').parentElement.className;
     console.log(task_priority);
     let new_task_html = `
-      <span class="${task_priority}">${task_title}</span>
       <button class="remove">❌</button>
       <button class="complete">✔️</button>
+      <span class=" ${task_priority}">${task_title}</span>
     `;
     li.innerHTML = new_task_html;
     // Add the actual new item to the empty tasks_list
